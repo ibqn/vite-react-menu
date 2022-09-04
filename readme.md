@@ -1,4 +1,4 @@
-## getting started
+## Getting started
 
 This react project was created with vite
 
