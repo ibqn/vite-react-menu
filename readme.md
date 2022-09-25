@@ -7,3 +7,7 @@ pnpm create vite
 pnpm add -D tailwindcss postcss autoprefixer
 pnpx tailwindcss init -p
 ```
+
+## Screenshot
+
+![Screehot](./screenshot.png)
