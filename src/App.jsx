@@ -1,7 +1,11 @@
 import Nav from './components/nav'
 
 function App() {
-  return <Nav />
+  return (
+    <div>
+      <Nav />
+    </div>
+  )
 }
 
 export default App

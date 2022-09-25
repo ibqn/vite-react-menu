@@ -1,4 +1,4 @@
-import clsx from 'clsx'
+import { classNames } from '../class-names'
 
 function MenuButton(props) {
   return (
@@ -8,21 +8,26 @@ function MenuButton(props) {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className={clsx(props.className, 'w-6 h-6')}
+      className="w-6 h-6"
     >
-      {props.open ? (
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M6 18L18 6M6 6l12 12"
-        />
-      ) : (
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-        />
-      )}
+      <path
+        className={classNames(
+          props.open ? 'opacity-100' : 'opacity-0',
+          'transition-opacity duration-300'
+        )}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M6 18L18 6M6 6l12 12"
+      />
+      <path
+        className={classNames(
+          props.open ? 'opacity-0' : 'opacity-100',
+          'transition-opacity duration-300'
+        )}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+      />
     </svg>
   )
 }
